@@ -1,4 +1,4 @@
-**Assignment**
+## **Assignment**
 
 This project combines a **simple search page** (Part 1) and a **personal portfolio** (Part 2) into a cohesive and mobile-friendly experience. It demonstrates modern design principles, usability, and responsiveness.
 
