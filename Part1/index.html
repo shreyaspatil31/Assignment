@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blog Search</h1>
+        </header>
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="search-box" 
+                placeholder="Search for blogs..." 
+                oninput="filterResults()" 
+                aria-label="Search for blogs">
+            <select id="filter" onchange="filterResults()" aria-label="Filter by category">
+                <option value="">All Categories</option>
+                <option value="technology">Technology</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="education">Education</option>
+            </select>
+        </div>
+        <div id="results">
+            <!-- Results will be dynamically displayed here -->
+        </div>
+        <footer>
+            <p>&copy; 2024 Blog Search. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

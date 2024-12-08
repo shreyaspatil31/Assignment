@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #3498db;
+    --background-color: #f4f6f7;
+    --text-color: #2c3e50;
+    --card-background: #ffffff;
+    --secondary-color: #48d8f1;
+    --hover-background: #eaf2fb;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 30px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#search-box,
+#filter {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#search-box:focus,
+#filter:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-item {
+    background-color: var(--hover-background);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+.result-item h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.result-item p {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.result-item small {
+    color: #bdc3c7;
+}
+
+.result-item:hover h3,
+.result-item:hover p,
+.result-item:hover small {
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #7f8c8d;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #search-box,
+    #filter {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .result-item {
+        padding: 15px;
+    }
+}
